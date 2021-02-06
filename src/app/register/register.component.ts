@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
       this.isInvalid = true;
     }
   }
+  
 
   typing1() {
     console.warn('inside typing1 method')
