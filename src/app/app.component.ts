@@ -19,6 +19,12 @@ export class AppComponent {
 
   movies = [1, 2, 3, 4, 5];
 
+  people = [
+    {name1 : 'rohan'},
+    {city : 'pune'},
+    {state : 'maharashtra'}
+  ];
+
   singer: string = 'atif aslam';
 
   singer2: string = 'KJDSLFJSDLJFL';
@@ -36,9 +42,5 @@ export class AppComponent {
     console.log('this.num', this.num)
   }
 
-
+  
 }
-
-
-class Student {
-} 
