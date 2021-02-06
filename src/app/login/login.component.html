@@ -1,20 +1,22 @@
+<div class="container col-sm-4 form-group" style="margin-top:2%;">
+    <div>
+        <label for="emailid">Email address :</label>
+        <input (keyup)="typing1()" [(ngModel)]="email" type="text" class="form-control">
+    </div>
+    <div *ngIf="istyping1">Invalid email id </div><br>
 
-
-<form id="loginform" class="form-horizontal" role="form">
 
     <div>
-    <span>User Name :</span>
-    <input id="login-username" type="text">
+        <label for="password">Password :</label>
+        <input (keyup)="typing2()" [(ngModel)]="password" type="password" class="form-control">
     </div>
+    <div *ngIf="istyping2">Invalid password </div><br>
     
-    <div><span>Password :</span>
-    <input id="login-password" type="password">
+    <div>
+        <button (click)="login()" class="btn btn-success">Login</button><span class="col-md-1"></span>
+        <button routerLink="/register" class="btn btn-primary">Register</button>
     </div>
 
-       
-    <div>
-        <button id="btn-login" routerLink="/login" class="btn btn-success">Login</button>
-        <button routerLink="/register">Register</button>
-    </div>
-                            
-</form>
+    <div *ngIf="isInvalid"> Invalid ID pass </div>
+
+</div>
