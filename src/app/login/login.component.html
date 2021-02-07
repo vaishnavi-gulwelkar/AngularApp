@@ -2,15 +2,15 @@
     <div>
         <label for="emailid">Email address :</label>
         <input (keyup)="typing1()" [(ngModel)]="email" type="text" class="form-control">
+        <small class="text-danger" *ngIf="istyping1">Invalid email id </small>
     </div>
-    <div *ngIf="istyping1">Invalid email id </div><br>
 
 
     <div>
         <label for="password">Password :</label>
         <input (keyup)="typing2()" [(ngModel)]="password" type="password" class="form-control">
+        <small class="text-danger" *ngIf="istyping2">Invalid password </small>
     </div>
-    <div *ngIf="istyping2">Invalid password </div><br>
     
     <div>
         <button (click)="login()" class="btn btn-success">Login</button><span class="col-md-1"></span>
