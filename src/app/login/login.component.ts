@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
     if (this.email == 'admin' && this.password == 'admin') {
       console.warn('inside if')
       alert('login success');
+      this.router.navigate(['/dashboard']);
     }
     else if (this.email == '' && this.password == '') {
       alert('please enter emaild id and password');
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
       this.isInvalid = true;
     }
   }
-  
+
 
   typing1() {
     console.warn('inside typing1 method')
