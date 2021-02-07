@@ -1,0 +1,28 @@
+<h1 >Add New Employee Here</h1>
+
+<div class="container col-sm-4 form-group" style="margin-top:2%;">
+    <div>
+      <label for="First Name">First Name :</label>
+      <input type="text" (keyup)="typing1()" [(ngModel)]="firstname" class="form-control">
+      <small class="text-danger" *ngIf="istyping1">Invalid first name </small>
+    </div>
+    <div>
+      <label for="Last Name">Last Name :</label>
+      <input type="text" (keyup)="typing2()" [(ngModel)]="lastname" class="form-control">
+      <small class="text-danger" *ngIf="istyping2">Invalid last name </small>
+    </div>
+    <div>
+        <label for="DOB">Date Of Birth :</label>
+        <input type="date" [(ngModel)]="dob" class="form-control">
+    </div>
+    <div>
+        <label for="Email">E-mail Id :</label>
+        <input type="email" (keyup)="typing3()" [(ngModel)]="email" class="form-control">
+        
+        <small class="text-danger" *ngIf="istyping3">Invalid email id </small>
+    </div>
+    <div>
+        <button (click)="add()" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+<div>
+    

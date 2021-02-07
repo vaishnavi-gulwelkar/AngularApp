@@ -1,10 +1,12 @@
+<h1>Login Here</h1>
+
+
 <div class="container col-sm-4 form-group" style="margin-top:2%;">
     <div>
         <label for="emailid">Email address :</label>
         <input (keyup)="typing1()" [(ngModel)]="email" type="text" class="form-control">
         <small class="text-danger" *ngIf="istyping1">Invalid email id </small>
     </div>
-
 
     <div>
         <label for="password">Password :</label>
