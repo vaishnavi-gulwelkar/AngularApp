@@ -17,7 +17,7 @@ import { EditEmpComponent } from './edit-emp/edit-emp.component';
     LoginComponent,
     DashboardComponent,
     AddEmpComponent,
-    EditEmpComponent,
+    EditEmpComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,11 @@ export class DashboardComponent implements OnInit {
     console.log('index', index)
     this.router.navigate([`/edit-emp/${index}`])
   }
+
+  deleteEmp(index:number){
+    employees.splice(index, 1);
+    this.empList = employees;
+  }
   ngOnInit(): void {
   }
 }

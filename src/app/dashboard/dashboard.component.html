@@ -9,6 +9,7 @@
                 <th>DOB</th>
                 <th>E-mail Id</th>
                 <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                 <td>{{employee.dob}}</td>
                 <td>{{employee.email}}</td>
                 <td><button class="btn btn-primary" type="button" (click)="editEmp(i)">Edit</button></td>
+                <td><button class="btn btn-primary" type="button" (click)="deleteEmp(i)">Delete</button></td>
             </tr>
 
         </tbody>
