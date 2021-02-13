@@ -13,11 +13,11 @@
     </div>
     <div>
         <label for="DOB">Date Of Birth :</label>
-        <input type="date" [(ngModel)]="dob" class="form-control">
+        <input type="text" [(ngModel)]="dob" class="form-control">
     </div>
     <div>
         <label for="Email">E-mail Id :</label>
-        <input type="email" (keyup)="typing3()" [(ngModel)]="email" class="form-control">
+        <input type="text" (keyup)="typing3()" [(ngModel)]="email" class="form-control">
         
         <small class="text-danger" *ngIf="istyping3">Invalid email id </small>
     </div>

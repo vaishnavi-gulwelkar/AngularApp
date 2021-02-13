@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Employee } from '../employee.interface';
 import { employees } from "../employees";
 
@@ -11,8 +12,15 @@ export class DashboardComponent implements OnInit {
 
   empList: Employee[] = employees;
 
-  constructor() { }
+  constructor(private router:Router) {
+    
 
+  }
+
+  editEmp(index: number) {
+    console.log('index', index)
+    this.router.navigate([`/edit-emp/${index}`])
+  }
   ngOnInit(): void {
   }
 }

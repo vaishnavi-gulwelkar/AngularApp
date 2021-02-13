@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddEmpComponent } from './add-emp/add-emp.component';
+import { EditEmpComponent } from './edit-emp/edit-emp.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AddEmpComponent } from './add-emp/add-emp.component';
     LoginComponent,
     DashboardComponent,
     AddEmpComponent,
+    EditEmpComponent,
   ],
   imports: [
     BrowserModule,
