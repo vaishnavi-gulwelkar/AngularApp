@@ -11,11 +11,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let employee of employees;index as i">
+            <tr *ngFor="let employee of empList;index as i">
                 <th>{{i+1}}</th>
                 <th>{{employee.firstName}}</th>
-                <td>{{employee.lastname}}</td>
-                <td>{{employee.DOB}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.dob}}</td>
                 <td>{{employee.email}}</td>
             </tr>
 

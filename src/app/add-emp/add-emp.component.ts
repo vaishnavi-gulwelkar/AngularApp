@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Employee } from '../employee.interface';
+import { employees } from "../employees";
 
 @Component({
   selector: 'app-add-emp',
@@ -7,17 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEmpComponent implements OnInit {
 
-  firstname=''
-  lastname=''
-  dob=''
-  email=''
+  firstname = ''
+  lastname = ''
+  dob = ''
+  email = ''
   istyping1 = true;
   istyping2 = true;
   istyping3 = true;
-  
+
   isInvalid = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -28,19 +33,19 @@ export class AddEmpComponent implements OnInit {
     if (this.firstname == '') {
       alert('please enter first name')
     }
-    else if(this.firstname.length<1){
+    else if (this.firstname.length < 1) {
       alert('First name should contain atleast one character')
     }
-    else if(this.firstname.length>=15){
+    else if (this.firstname.length >= 15) {
       alert('First Name could not be so lengthy')
     }
     else if (this.lastname == '') {
       alert('please enter last name');
     }
-    else if(this.lastname.length<1){
+    else if (this.lastname.length < 1) {
       alert('Last name should contain atleast one character')
     }
-    else if(this.lastname.length>=15){
+    else if (this.lastname.length >= 15) {
       alert('Last Name could not be so lengthy')
     }
     else if (this.dob == '') {
@@ -52,6 +57,8 @@ export class AddEmpComponent implements OnInit {
     else {
       this.isInvalid = true;
     }
+
+    this.addNewEmp();
   }
 
   typing1() {
@@ -65,6 +72,17 @@ export class AddEmpComponent implements OnInit {
   typing3() {
     console.warn('inside typing4 method')
     this.istyping3 = false;
+  }
+
+  addNewEmp() {
+    const newEmp: Employee = {
+      firstName: this.firstname,
+      lastName: this.lastname,
+      dob: this.dob,
+      email: this.email
+    }
+    employees.push(newEmp);
+    this.router.navigate(['/dashboard'])
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Employee } from '../employee.interface';
+import { employees } from "../employees";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,35 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  employees = [
-    {
-      firstName: 'Diksha',
-      lastname: 'Agrawal',
-      DOB: '9-2-1999',
-      email: 'diksha@gmail.com'
-    },
-    {
-      firstName: 'rohith',
-      lastname: 'dalvi',
-      DOB: '9-3-1999',
-      email: 'rohith@gmail.com'
-    },
-    {
-      firstName: 'manas',
-      lastname: 'kulkarni',
-      DOB: '9-4-1999',
-      email: 'manas@gmail.com'
-    },
-    {
-      firstName: 'rahul',
-      lastname: 'joshi',
-      DOB: '9-5-1999',
-      email: 'rahul@gmail.com'
-    }
-  ];
+  empList: Employee[] = employees;
 
   constructor() { }
 
   ngOnInit(): void {
-  } 
+  }
 }
