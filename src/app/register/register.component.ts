@@ -23,8 +23,8 @@ export class RegisterComponent implements OnInit {
   register() {
     console.warn('Clicked')
 
-    if (this.email == '' && this.password == '') {
-      alert('please enter emaild id and password');
+    if (this.email == '' && this.password == '' && this.repassword == '') {
+      alert('please enter emaild id, password and confirmation password');
     }
     else if (this.email == '') {
       alert('please enter email id')
@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
       this.isInvalid = true;
     }
   }
-  
+
 
   typing1() {
     console.warn('inside typing1 method')
