@@ -1,8 +1,11 @@
-<div>
-    Firstname :<input class="form-control" type="text">
-    lastname :<input class="form-control" type="text">
-    dob :<input class="form-control" type="text">
-    email :<input class="form-control" type="text">
+<div class="container col-md-3">
 
-    <button class="btn btn-primary" type="button">Save</button>
+    <div><h1>Edit Form</h1></div>
+
+    Firstname :<input class="form-control" [(ngModel)]="firstName" type="text">
+    lastname :<input class="form-control" [(ngModel)]="lastName" type="text">
+    dob :<input class="form-control" [(ngModel)]="dob" type="text">
+    email :<input class="form-control" [(ngModel)]="email" type="text">
+
+    <button class="btn btn-primary" type="button" (click)="editEmp()">Save</button>
 </div>

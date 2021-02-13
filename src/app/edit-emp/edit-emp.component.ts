@@ -26,8 +26,8 @@ export class EditEmpComponent implements OnInit {
     this.id = this.active.snapshot.params.id;
     this.firstName = employees[this.id].firstName;
     this.lastName=employees[this.id].lastName;
-    this.dob=employees[this.dob].dob;
-    this.email=employees[this.email].email;
+    this.dob=employees[this.id].dob;
+    this.email=employees[this.id].email;
   }
 
   editEmp() {
