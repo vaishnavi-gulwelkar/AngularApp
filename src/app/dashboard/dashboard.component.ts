@@ -27,15 +27,21 @@ export class DashboardComponent implements OnInit {
       this.empList = employees;
     }   
     
+  
 } 
+logout(){
+  const log=localStorage.getItem('islogedin');
+  if(log=='true'){
+    localStorage.removeItem('email');
+    localStorage.removeItem('password');
+    localStorage.removeItem('islogedin');
+
+    this.router.navigate(['/login']);
+    alert('Loged Out Successfully');
+  }
+}
   
   ngOnInit(): void {
-    const log=localStorage.getItem('islogedin');
-/*
-    if(log=='true'){
-      localStorage.removeItem('email');
-      localStorage.removeItem('password');
-      localStorage.removeItem('islogedin');
-    }*/
+    
   }
 }
