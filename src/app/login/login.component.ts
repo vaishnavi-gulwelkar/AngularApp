@@ -10,22 +10,33 @@ export class LoginComponent implements OnInit {
 
   email = '';
   password = '';
+  islogedin= true;
   istyping1 = true;
   istyping2 = true;
   isInvalid = false;
+  
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(localStorage.getItem('islogedin')){
+      this.router.navigate(['/dashboard']);
+
+    }
   }
 
   login() {
     console.warn('Clicked')
 
     if (this.email == 'admin' && this.password == 'admin') {
-      console.warn('inside if')
-      alert('login success');
+
+      localStorage.setItem('email', this.email);
+      localStorage.setItem('password', this.password);
+      localStorage.setItem('islogedin', this.islogedin.toString());    
+       console.warn('inside if');
+      alert('login success');   
       this.router.navigate(['/dashboard']);
+      
     }
     else if (this.email == '' && this.password == '') {
       alert('please enter emaild id and password');
@@ -40,7 +51,6 @@ export class LoginComponent implements OnInit {
       this.isInvalid = true;
     }
   }
-
 
   typing1() {
     console.warn('inside typing1 method')

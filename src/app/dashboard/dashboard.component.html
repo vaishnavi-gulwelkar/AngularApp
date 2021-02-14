@@ -1,5 +1,7 @@
 <div class="container mt-4">
     <button class="btn btn-primary m-4 float-right" type="button" routerLink="/add-emp">Add new employee</button>
+
+    <div *ngIf="empList.length !== 0">
     <table class="table">
         <thead>
             <tr>
@@ -22,7 +24,11 @@
                 <td><button class="btn btn-primary" type="button" (click)="editEmp(i)">Edit</button></td>
                 <td><button class="btn btn-primary" type="button" (click)="deleteEmp(i)">Delete</button></td>
             </tr>
-
         </tbody>
-    </table>
+    </table>   
+</div> 
 </div>
+
+<div class="col-md-8 alert alert-warning" role="alert" *ngIf="empList.length === 0">
+    <p>!...No Employees Found</p>
+</div> 
