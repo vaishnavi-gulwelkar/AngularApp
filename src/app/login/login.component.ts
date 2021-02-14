@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('islogedin')){
+    if(localStorage.getItem('email')){
       this.router.navigate(['/dashboard']);
 
     }
@@ -30,9 +30,7 @@ export class LoginComponent implements OnInit {
 
     if (this.email == 'admin' && this.password == 'admin') {
 
-      localStorage.setItem('email', this.email);
-      localStorage.setItem('password', this.password);
-      localStorage.setItem('islogedin', this.islogedin.toString());    
+      localStorage.setItem('email', this.email);  
        console.warn('inside if');
       alert('login success');   
       this.router.navigate(['/dashboard']);
